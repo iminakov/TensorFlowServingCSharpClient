@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73169028-08E0-45D3-8673-241B7164163A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TensorFlowServingClient</RootNamespace>
+    <AssemblyName>TensorFlowServingClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf">
+      <HintPath>..\..\packages\Google.Protobuf.3.5.0\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>..\..\packages\Grpc.Core.1.8.0\lib\net45\Grpc.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Interactive.Async">
+      <HintPath>..\..\packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Utils\ImageUtils.cs" />
+    <Compile Include="Utils\ModelMethodClasses.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AllocationDescription.cs" />
+    <Compile Include="Service\ApiDef.cs" />
+    <Compile Include="Service\AttrValue.cs" />
+    <Compile Include="Service\Classification.cs" />
+    <Compile Include="Service\Cluster.cs" />
+    <Compile Include="Service\Config.cs" />
+    <Compile Include="Service\ControlFlow.cs" />
+    <Compile Include="Service\CostGraph.cs" />
+    <Compile Include="Service\Debug.cs" />
+    <Compile Include="Service\DeviceAttributes.cs" />
+    <Compile Include="Service\DeviceProperties.cs" />
+    <Compile Include="Service\Example.cs" />
+    <Compile Include="Service\ExampleParserConfiguration.cs" />
+    <Compile Include="Service\Feature.cs" />
+    <Compile Include="Service\Function.cs" />
+    <Compile Include="Service\GetModelMetadata.cs" />
+    <Compile Include="Service\Graph.cs" />
+    <Compile Include="Service\GraphTransferInfo.cs" />
+    <Compile Include="Service\Inference.cs" />
+    <Compile Include="Service\Input.cs" />
+    <Compile Include="Service\Iterator.cs" />
+    <Compile Include="Service\KernelDef.cs" />
+    <Compile Include="Service\LogMemory.cs" />
+    <Compile Include="Service\Master.cs" />
+    <Compile Include="Service\MasterService.cs" />
+    <Compile Include="Service\MetaGraph.cs" />
+    <Compile Include="Service\Model.cs" />
+    <Compile Include="Service\NamedTensor.cs" />
+    <Compile Include="Service\NodeDef.cs" />
+    <Compile Include="Service\OpDef.cs" />
+    <Compile Include="Service\OpGenOverrides.cs" />
+    <Compile Include="Service\Predict.cs" />
+    <Compile Include="Service\PredictionService.cs" />
+    <Compile Include="Service\PredictionServiceGrpc.cs" />
+    <Compile Include="Service\ReaderBase.cs" />
+    <Compile Include="Service\Regression.cs" />
+    <Compile Include="Service\RemoteFusedGraphExecuteInfo.cs" />
+    <Compile Include="Service\ResourceHandle.cs" />
+    <Compile Include="Service\RewriterConfig.cs" />
+    <Compile Include="Service\SavedModel.cs" />
+    <Compile Include="Service\Saver.cs" />
+    <Compile Include="Service\StepStats.cs" />
+    <Compile Include="Service\Summary.cs" />
+    <Compile Include="Service\Tensor.cs" />
+    <Compile Include="Service\TensorBundle.cs" />
+    <Compile Include="Service\TensorDescription.cs" />
+    <Compile Include="Service\TensorflowServer.cs" />
+    <Compile Include="Service\TensorShape.cs" />
+    <Compile Include="Service\TensorSlice.cs" />
+    <Compile Include="Service\Types.cs" />
+    <Compile Include="Service\Variable.cs" />
+    <Compile Include="Service\Versions.cs" />
+    <Compile Include="Service\Worker.cs" />
+    <Compile Include="Service\WorkerService.cs" />
+    <Compile Include="Utils\TensorBuilder.cs" />
+    <Compile Include="Utils\TextUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="build_proto.bat" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="protos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\Grpc.Core.1.8.0\build\net45\Grpc.Core.targets" Condition="Exists('..\..\packages\Grpc.Core.1.8.0\build\net45\Grpc.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

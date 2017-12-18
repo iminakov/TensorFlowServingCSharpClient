@@ -1,0 +1,6 @@
+FOR %%i IN (%~dp0protos/*.proto) DO %~dp0../../packages/Grpc.Tools.1.8.0/tools/windows_x86/protoc.exe --proto_path="%~dp0protos" --csharp_out="%~dp0Service" %~dp0protos/%%~ni.proto
+FOR %%i IN (%~dp0protos/tensorflow/core/example/*.proto) DO %~dp0../../packages/Grpc.Tools.1.8.0/tools/windows_x86/protoc.exe --proto_path="%~dp0protos" --csharp_out="%~dp0Service" %~dp0protos/tensorflow/core/example/%%~ni.proto
+FOR %%i IN (%~dp0protos/tensorflow/core/protobuf/*.proto) DO %~dp0../../packages/Grpc.Tools.1.8.0/tools/windows_x86/protoc.exe --proto_path="%~dp0protos" --csharp_out="%~dp0Service" %~dp0protos/tensorflow/core/protobuf/%%~ni.proto
+FOR %%i IN (%~dp0protos/tensorflow/core/framework/*.proto) DO %~dp0../../packages/Grpc.Tools.1.8.0/tools/windows_x86/protoc.exe --proto_path="%~dp0protos" --csharp_out="%~dp0Service" %~dp0protos/tensorflow/core/framework/%%~ni.proto
+
+%~dp0../../packages/Grpc.Tools.1.8.0/tools/windows_x86/protoc.exe -I "%~dp0protos" --csharp_out "%~dp0Service"  --grpc_out "%~dp0Service" "%~dp0protos/prediction_service.proto" --plugin=protoc-gen-grpc="%~dp0../../packages/Grpc.Tools.1.8.0/tools/windows_x86/grpc_csharp_plugin.exe"

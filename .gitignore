@@ -1,0 +1,5 @@
+/src/BaseLibs/TensorFlowServingClient/protos
+packages
+.vs
+bin
+obj

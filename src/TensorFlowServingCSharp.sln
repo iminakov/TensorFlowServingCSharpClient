@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseLib", "BaseLib", "{4480A568-1DF5-4368-A2DF-51C48F02C86D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{ECA6F719-753D-42A0-8CD4-4EB67DBFA9D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C05E44F8-5883-447B-A8C3-970D8B3C2A73}"
+	ProjectSection(SolutionItems) = preProject
+		Clients\WebTensorFlowServiingClient\global.json = Clients\WebTensorFlowServiingClient\global.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TensorFlowServingClient", "BaseLibs\TensorFlowServingClient\TensorFlowServingClient.csproj", "{73169028-08E0-45D3-8673-241B7164163A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTensorFlowServingClient", "Clients\ConsoleTensorFlowServingClient\ConsoleTensorFlowServingClient.csproj", "{FC26FD2A-FE41-4684-A95A-471CDEDBB870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTensorFlowServingClient", "Clients\WebTensorFlowServingClient\WebTensorFlowServingClient.csproj", "{86E888D3-3156-42F9-968B-0E0ECAD41CF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73169028-08E0-45D3-8673-241B7164163A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73169028-08E0-45D3-8673-241B7164163A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73169028-08E0-45D3-8673-241B7164163A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73169028-08E0-45D3-8673-241B7164163A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC26FD2A-FE41-4684-A95A-471CDEDBB870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC26FD2A-FE41-4684-A95A-471CDEDBB870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC26FD2A-FE41-4684-A95A-471CDEDBB870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC26FD2A-FE41-4684-A95A-471CDEDBB870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E888D3-3156-42F9-968B-0E0ECAD41CF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E888D3-3156-42F9-968B-0E0ECAD41CF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E888D3-3156-42F9-968B-0E0ECAD41CF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E888D3-3156-42F9-968B-0E0ECAD41CF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{73169028-08E0-45D3-8673-241B7164163A} = {4480A568-1DF5-4368-A2DF-51C48F02C86D}
+		{FC26FD2A-FE41-4684-A95A-471CDEDBB870} = {ECA6F719-753D-42A0-8CD4-4EB67DBFA9D9}
+		{86E888D3-3156-42F9-968B-0E0ECAD41CF5} = {ECA6F719-753D-42A0-8CD4-4EB67DBFA9D9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {879A68B2-303A-4ABD-8A56-1214B27FDACA}
+	EndGlobalSection
+EndGlobal
