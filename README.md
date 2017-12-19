@@ -9,14 +9,12 @@ Repository contains the following content:
 
 ## How to start web application
 - Run TensorFlow Serving with instructions [here](https://github.com/Wertugo/TensorFlowServingCSharpClient/tree/master/learning)
-- Open web solution and start web site with IIS express. 
+- Open .NET solution. 
 - Update appsetting.json with TensorFlow Serving address:
 ```sh
 "TfServer": {
         "ServerUrl": "192.168.1.38:9000"
     }
 ```
-
-## Tools
-- For learning script use [Visual Studio Code](https://code.visualstudio.com/). Windows 7 - 10 or Ubuntu 16.0.6.
-- For ASP.NET Core 2.0/ ReactJS project use [MSVS 2017](https://www.visualstudio.com/) or later
+- Start web application with IIS express
+- Test prediction
