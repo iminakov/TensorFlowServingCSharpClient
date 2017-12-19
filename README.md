@@ -18,3 +18,6 @@ Repository contains the following content:
 ```
 - Start web application with IIS express
 - Test prediction
+
+![.NET TensorFlow Client](https://raw.githubusercontent.com/Wertugo/TensorFlowServingCSharpClient/master/src/content/preview.png)
+
