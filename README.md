@@ -1,3 +1,5 @@
+[Depricated] !!!Example of integration between Tensorflow Serving 2.0 and NetCore Client App is available [here](https://github.com/iminakov/TensorFlow2ServingDotNet5Client).
+
 # TensorFlow Serving MNIST Deep C# client
 
 This is example of C# clients for TensorFlow Serving gRPC service.
